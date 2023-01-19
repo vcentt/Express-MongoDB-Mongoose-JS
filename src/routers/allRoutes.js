@@ -65,7 +65,7 @@ router.delete("/remove/:team/:number", async (req,res) => {
 
     playerRosterSchema.deleteOne({team , number}).then((data) => {if(data.deletedCount === 1){
         return res.json({
-            message:`Player ${himDeletedName.name} of team ${team} was deleted correctly`
+            message:`Player ${himDeletedName.name} of team ${team} was deleted correctly.`
         })
     }else{
         res.json({
